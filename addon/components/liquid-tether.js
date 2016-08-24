@@ -102,10 +102,16 @@ export default LiquidWormhole.extend({
   },
 
   actions: {
+
     clickOverlay() {
       if (this.get('on-overlay-click')) {
         this.sendAction('on-overlay-click');
       }
+    },
+
+    reposition() {
+      this._tether.position();
     }
+
   }
 });
